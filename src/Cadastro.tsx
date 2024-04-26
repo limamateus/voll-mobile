@@ -13,29 +13,35 @@ import { TouchableOpacity } from "react-native";
 import { Titulo } from "./componentes/Titulo";
 import { EntradaTexto } from "./componentes/EntradaTexto";
 import { Botao } from "./componentes/Botao";
-export default function Login() {
+export default function Cadastro() {
   return (
     <VStack flex={1} alignItems="center" p={5} justifyContent="center">
       <Image source={Logo} alt="Logo Voll" />
 
-      <Titulo>Faça login em sua conta!</Titulo>
+      <Titulo>Realize seu cadastro!</Titulo>
       <Box>
-        <EntradaTexto 
-        label="Email"
-        placeholder="Insira seu endereço de e-mail !"       
-        />         
-       
-
-        <EntradaTexto 
-        label="Senha"         
-        placeholder="Digite sua senha"
-        secureTextEntry = {true}
+      <EntradaTexto
+          label="Nome"
+          placeholder="Insira seu endereço de e-mail !"
         />
-         
-        
+
+        <EntradaTexto
+          label="Email"
+          placeholder="Insira seu endereço de e-mail !"
+        />
+         <EntradaTexto
+          label="Crie uma senha"
+          placeholder="Digite sua senha"
+          secureTextEntry={true}
+        />
+        <EntradaTexto
+          label="Repita a senha"
+          placeholder="Digite sua senha"
+          secureTextEntry={true}
+        />
       </Box>
 
-      <Botao>Entra</Botao>
+      <Botao>Avançar</Botao>
 
       <Link href="" mt={2}>
         Esqueceu sua senha
