@@ -1,16 +1,19 @@
-import { FormControl, ITextProps, Input } from "native-base";
+import { FormControl, IInputProps, Input } from "native-base";
 import { ReactNode } from "react";
+import { KeyboardType } from "react-native";
 
-interface InputProps {
+interface InputProps extends IInputProps {
     label?: string;
     placeholder: string;
     secureTextEntry?: boolean;
   leftIcon?: React.ReactNode;
+  keyboardType? : KeyboardType
   }
   
 export function EntradaTexto({  
     label, 
     placeholder, 
+    keyboardType,
     secureTextEntry = false }: InputProps ) {
   return (
     <FormControl mt={3}>
@@ -23,6 +26,7 @@ export function EntradaTexto({
             bgColor="gray.100"
             secureTextEntry={secureTextEntry}
             shadow={3}
+            keyboardType={keyboardType}
             />
     </FormControl>
    

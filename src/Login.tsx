@@ -22,7 +22,8 @@ export default function Login() {
       <Box>
         <EntradaTexto 
         label="Email"
-        placeholder="Insira seu endereço de e-mail !"       
+        placeholder="Insira seu endereço de e-mail !"   
+        keyboardType={"email-address"}    
         />         
        
 
