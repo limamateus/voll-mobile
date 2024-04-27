@@ -13,7 +13,7 @@ interface InputProps extends IInputProps {
 export function EntradaTexto({  
     label, 
     placeholder, 
-    keyboardType,
+    keyboardType = "default",
     secureTextEntry = false }: InputProps ) {
   return (
     <FormControl mt={3}>
