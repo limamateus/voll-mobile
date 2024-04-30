@@ -1,5 +1,4 @@
-import {
-  VStack,
+import {  
   Image,  
   Box,
   ScrollView,
