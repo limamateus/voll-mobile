@@ -1,9 +1,23 @@
-import { Text, VStack } from "native-base";
+import { Text, VStack, ScrollView, Avatar, Divider } from "native-base";
+import { Titulo } from "../componentes/Titulo";
 
 export default function Perfil() {
   return (
-    <VStack>
-      <Text>Perfil</Text>
-    </VStack>
+    <ScrollView p={5} flex={1} >
+      <VStack  alignItems="center" >
+        <Titulo color='blue.500'> Meu Perfil</Titulo>
+        <Avatar source={{ uri: "https://github.com/limamateus.png" }} mt={5} size="xl" />
+        <Titulo color='blue.500'>Informações pessoais</Titulo>
+        <Titulo fontSize='lg' mb={1}>Mateus</Titulo>
+        <Text>12/12/1990</Text>
+        <Text>São Paulo</Text>
+        <Divider mt={5}/>
+        <Titulo color='blue.500' mb={1}>Historico Medico</Titulo>
+        <Text>Bronquite</Text>
+        <Text>Sinusite</Text>
+        
+      </VStack>   
+      
+    </ScrollView>
   );
 }

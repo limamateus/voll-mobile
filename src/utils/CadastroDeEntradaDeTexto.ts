@@ -105,5 +105,17 @@ const sessoes = [
     },
 ];
 
+const home = [
+    {
+      id: 1,
+      label: "Especialidade",
+      placeholder: "Digite a especialidade",
+    },
+    {
+      id: 2,
+      label: "Localização",
+      placeholder: "Digite sua localização",
+    },
+  ];
 
-export { sessoes }
+export { sessoes,home }
