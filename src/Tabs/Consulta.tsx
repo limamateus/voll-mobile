@@ -1,4 +1,4 @@
-import { Divider, ScrollView, Text, VStack } from "native-base";
+import { Divider, ScrollView } from "native-base";
 import CardConsulta from "../componentes/CardConsulta";
 import { Titulo } from "../componentes/Titulo";
 import { Botao } from "../componentes/Botao";

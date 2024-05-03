@@ -1,7 +1,6 @@
 import { Box, VStack } from "native-base";
 import { EntradaTexto } from "./EntradaTexto";
 import { Botao } from "./Botao";
-
 import { home } from "../utils/CadastroDeEntradaDeTexto";
 
 export default function CardDeBusca() {

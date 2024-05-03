@@ -1,6 +1,5 @@
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import Ionicons from 'react-native-vector-icons/Ionicons'
-
 import Principal from "./Principal";
 import Consulta from "./Consulta";
 import Explorar from "./Explorar";

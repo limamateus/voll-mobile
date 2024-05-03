@@ -1,4 +1,4 @@
-import { Box, Image, ScrollView, Text, VStack } from "native-base";
+import { Box, Image, ScrollView} from "native-base";
 import { Titulo } from "../componentes/Titulo";
 import { Depoimento } from "../componentes/Depoimento";
 import {depoimentos} from '../utils/MockDepoimentos';

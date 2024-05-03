@@ -1,6 +1,5 @@
-import { Divider, FormControl, IInputProps, Input, Text, VStack } from "native-base";
-import { ReactNode } from "react";
-import { KeyboardType } from "react-native";
+import { Divider, Text, VStack } from "native-base";
+
 
 
   
