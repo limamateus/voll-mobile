@@ -16,7 +16,7 @@ export default function Login({ navigation }) {
   const toast = useToast(); // Toast para mostrar uma mensagem para usuario final caso tenha dado algum erro na api
 
   useEffect(() => { // Esse userEffect irá é responsavel por verificar se existe um login já realizado
-    async function verificarLogin() {
+    async function verificarLogin() {      
       const token = await AsyncStorage.getItem("token");
       if (token) {
         navigation.navigate("Tabs");
@@ -28,8 +28,9 @@ export default function Login({ navigation }) {
     setCarregandoTela(false);
   }, []);
   async function Login() { // Funcção asyncrono para realizar o login 
+    
     const resultado = await fazerLogin(email, senha); // 1 - Realizo a requisição na api passando o e-mail e senha
- 
+    
     if (resultado) { // 2 - Coso tenha algum resultado 
       const { token } = resultado; // pego o token 
       AsyncStorage.setItem("token", token); // Armazeno no AsyncStorege

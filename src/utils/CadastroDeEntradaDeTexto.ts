@@ -5,23 +5,34 @@ const sessoes = [
         entradaDeTexto: [
             {
                 id: 1,
-                label: "Nome",
-                placeholder: "Digite seu nome completo !",
+                label: "CPF",
+                placeholder: "Digite seu CPF completo !",
+                name:"cpf"
+                
             },
             {
                 id: 2,
-                label: "Email",
-                placeholder: "Insira seu endereço de e-mail !",
-                keyboardType:"email-address" 
+                label: "Nome",
+                placeholder: "Digite seu nome completo !",
+                name:"nome"
+                
             },
             {
                 id: 3,
-                label: "Crie uma senha",
-                placeholder: "Digite sua senha",
-                secureTextEntry: true,
+                label: "Email",
+                placeholder: "Insira seu endereço de e-mail !",
+                keyboardType:"email-address" ,
+                name:"email"
             },
             {
                 id: 4,
+                label: "Crie uma senha",
+                placeholder: "Digite sua senha",
+                secureTextEntry: true,
+                name: "senha"
+            },
+            {
+                id: 5,
                 label: "Repita a senha",
                 placeholder: "Digite sua senha",
                 secureTextEntry: true,
@@ -37,29 +48,40 @@ const sessoes = [
                 id: 1,
                 label: "CEP",
                 placeholder: "Insira seu CEP",
+                keyboardType:"numeric",               
+                name: "cep"
             },
             {
                 id: 2,
-                label: "Endereço",
+                label: "Rua",
                 placeholder: "Insira seu endereço",
+                name:"rua"
             },
             {
                 id: 3,
                 label: "Número",
                 placeholder: "Insira seu número",                
-                keyboardType:"numeric"
+                keyboardType:"numeric",
+                name:"numero"
             },
             {
                 id: 4,
                 label: "Complemento",
                 placeholder: "Insira seu complemento",              
-               
+                name:"complemento"
             },
             {
                 id: 5,
+                label: "Estado",
+                placeholder: "Insira seu estado",              
+                name:"estado"
+            },
+            {
+                id: 6,
                 label: "Telefone",
                 placeholder: "(00) 00000-0000",              
-                keyboardType:"phone-pad"
+                keyboardType:"phone-pad",
+                name:"telefone"
             },
         ],
     },
@@ -95,11 +117,7 @@ const sessoes = [
             {
                 id: 7,
                 value: "Outros",
-            },
-            {
-                id: 9,
-                value: "Não tenho plano",
-            },
+            },            
 
         ],
     },
