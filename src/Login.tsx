@@ -16,16 +16,19 @@ export default function Login({ navigation }) {
   const toast = useToast(); // Toast para mostrar uma mensagem para usuario final caso tenha dado algum erro na api
 
   useEffect(() => { // Esse userEffect irá é responsavel por verificar se existe um login já realizado
-    async function verificarLogin() {      
+    async function verificarLogin() {     
+     
       const token = await AsyncStorage.getItem("token");
+      
       if (token) {
         navigation.navigate("Tabs");
       }
+      setCarregandoTela(false);
     }
 
     verificarLogin();
 
-    setCarregandoTela(false);
+    
   }, []);
   async function Login() { // Funcção asyncrono para realizar o login 
     
@@ -37,6 +40,9 @@ export default function Login({ navigation }) {
       const decodeToken = jwtDecode(token) as any; // Decodifico o token 
       const pacienteId = decodeToken.id; // Pego o id do paciente
       AsyncStorage.setItem("pacienteId", pacienteId); // Armazeno no AsyncStorage
+      setCarregandoTela(true);
+      navigation.navigate("Tabs"); // Vou para proxima tela
+      
     } else { // Caso de algum erro
       toast.show({
         title: "Erro no Login", // Titulo

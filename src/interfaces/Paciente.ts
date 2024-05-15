@@ -1,5 +1,4 @@
-
-
+import { Endereco } from "./Endereco"
 
 export interface Paciente {
     cpf: string,
@@ -16,10 +15,3 @@ export interface Paciente {
 
 
 
-export interface Endereco{
-    cep:string,
-    rua: string,
-    numero: number,
-    complemento: string,
-    estado: string,
-}

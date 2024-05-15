@@ -1,4 +1,3 @@
-import Login from "./src/Login"
 import {NativeBaseProvider, StatusBar} from 'native-base'
 import { TEMAS } from "./src/estilos/temas";
 import Rotas from "./src/Rotas";

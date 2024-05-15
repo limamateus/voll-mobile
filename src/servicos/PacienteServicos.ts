@@ -16,3 +16,16 @@ export async function cadastrarPaciente(paciente: Paciente){
     }
 
 }
+
+
+export async function pegarDadosPaciente(id:string) {
+    try {
+        const resultado = await api.get(`/paciente/${id}`)
+        return resultado.data
+
+        console.log(resultado)
+    } catch (error) {
+        console.log(error)
+        return null
+    }
+}
