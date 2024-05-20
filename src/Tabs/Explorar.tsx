@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 import { Especialista } from "../interfaces/Especialista";
 
 
-export default function Explorar() {
+export default function Explorar({navigation}) {
 
   const [resultadoBusca,setResultadoBusca] = useState([])
   
@@ -30,7 +30,9 @@ export default function Explorar() {
               nome={resultado?.nome}
               especialidade={resultado?.especialidade}
               foto={resultado?.imagem}
-              
+              onPress={ () => navigation.navigate('Agendamento',{
+                especialistaId: resultado.id
+              })}
             />
             )
             

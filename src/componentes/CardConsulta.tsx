@@ -2,13 +2,13 @@ import { Avatar, Text, VStack } from "native-base";
 import { Botao } from "./Botao";
 
 interface CardProps {
-    nome: string,
-    foto: string,
-    especialidade:string,
-    data?:string,
-    foiAtendido?: boolean,
-    foiAgendado?:boolean
-
+    nome: string;
+    foto: string;
+    especialidade:string;
+    data?:string;
+    foiAtendido?: boolean;
+    foiAgendado?:boolean;
+    onPress?: () => void;
 }
 
 
@@ -18,7 +18,8 @@ export default function CardConsulta({
     especialidade,
     data,
     foiAtendido,
-    foiAgendado
+    foiAgendado,
+    onPress
 }:CardProps){
     return(
         <VStack w='100%' bg={foiAtendido ? 'blue.100' : 'white'} p="5" borderRadius="lg" shadow='2' mb={2}>
@@ -31,7 +32,7 @@ export default function CardConsulta({
             </VStack>
             </VStack>
 
-            <Botao mt={4}>
+            <Botao mt={4} onPress={ () => onPress()}>
             {
                 foiAgendado ? "Cancelar" : "Agendar consulta"
             }            

@@ -42,7 +42,7 @@ export default function Login({ navigation }) {
       AsyncStorage.setItem("pacienteId", pacienteId); // Armazeno no AsyncStorage
       setCarregandoTela(true);
       navigation.navigate("Tabs"); // Vou para proxima tela
-      
+      console.log(resultado)
     } else { // Caso de algum erro
       toast.show({
         title: "Erro no Login", // Titulo
